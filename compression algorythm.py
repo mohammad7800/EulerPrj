@@ -5,9 +5,9 @@ def give(one, leng, num):
     zero = leng - one
     maxx = factorial(leng) / (factorial(one) * factorial(zero))
     if num == 1:
-        return ['1' for _ in range(one)] + ['0' for _ in range(zero)]
+        return ''.join(['1' for _ in range(one)] + ['0' for _ in range(zero)])
     elif num == maxx:
-        return ['0' for _ in range(zero)] + ['1' for _ in range(one)]
+        return ''.join(['0' for _ in range(zero)] + ['1' for _ in range(one)])
     res = ['0' for _ in range(leng)]
     if any([num > maxx, num < 1]):
         print('bad file ...')
